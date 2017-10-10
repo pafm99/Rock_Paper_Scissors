@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <H1>Rock Paper Scissors</H1>
+    @{
+        string playedString = " " + ViewBag.gamesPlayed;
+        string wonString = "" + ViewBag.gamesWon;
+    }
+    <p>Games Played: @playedString</p>
+    <p>Games Won: @wonString</p>
+    <form action="game" method="post">
+        <label for="rock">Rock</label>
+        <input type="radio" name="choice" value="rock"><br>
+        <label for="paper">Paper</label>
+        <input type="radio" name="choice" value="paper"><br>
+        <label for="scissors">Scissors</label>
+        <input type="radio" name="choice" value="scissors"><br>
+        <input type="submit" value="Submit">
+    </form>
+    @{
+        string playerString = "You picked: " + ViewBag.playerpick;
+        string computerString = "Computer picked: " + ViewBag.computerpick;
+        string result = "Result: " + ViewBag.result;
+    }
+    <p>@playerString</p>
+    <p>@computerString</p>
+    <p>@result</p>
+    <p></p>       
+    
+</body>
+</html>
